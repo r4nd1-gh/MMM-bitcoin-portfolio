@@ -1,26 +1,27 @@
-# MMM-bitcoin
-A `bitcoin ticker` <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a> module.
+# MMM-bitcoin-portfolio
+A Bitcoin pricechecker which can also display the price of your Bitcoin amount.
+Module for <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>.
 
 ## Preview
 ![preview](preview.png)
 
 ## Using the module
-Add `MMM-bitcoin` module to the `modules` array in the `config/config.js` file:
+Add `MMM-bitcoin-portfolio` module to the `modules` array in the `config/config.js` file:
 ````javascript
 modules: [
   {
-    module: 'MMM-bitcoin',
-    position: 'top_right',
+    module: 'MMM-bitcoin-portfolio',
+    position: 'middle_center',
     config: {
-      fiat: 'usd',          // 'usd' and 'eur' available, defaults to 'usd'
-      showBefore: 'foo',    // will display before the bitcoin price, default 'Bitstamp'
-      updateInterval: 60000 // update interval in milliseconds
+      currency: 'usd',                    // 'usd' and 'eur' available, defaults to 'usd'
+      showBeforePrice: 'Bitcoin price: ', // will display before the bitcoin price
+      ownedAmount: 0.05579,               // the amount of bitcoin you own yourself
+      showBeforeOwned: 'Your wallet: ',   // will display before the wallet value
+      updateInterval: 60000               // update interval in milliseconds,
     }
   },
 ]
 ````
 
-## Coming soon
-- [ ] Chart
-- [ ] Other exchanges
-- [ ] Currency defaults
+## Credits
+This modules was built upon an existing module from GitHub user [valmassoi](https://github.com/valmassoi/MMM-bitcoin)
