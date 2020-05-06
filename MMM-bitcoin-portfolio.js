@@ -43,7 +43,7 @@ Module.register("MMM-bitcoin-portfolio", {
     let currencySymbol = this.config.currencyTable[this.config.currency].symbol;
     let lastPrice = data.last;
     if (lastPrice) {
-      symbolElement.innerHTML = this.config.showBefore + ': ' + currencySymbol;
+      symbolElement.innerHTML = this.config.showBefore + ' ' + currencySymbol;
       wrapper.appendChild(symbolElement);
       let priceElement = document.createElement("span");
       priceElement.innerHTML = lastPrice;
@@ -55,7 +55,7 @@ Module.register("MMM-bitcoin-portfolio", {
         wrapper.appendChild(brElement);
 
         let portfolioElement = document.createElement("small");
-        portfolioElement.innerHTML = this.config.showBeforeOwned + ': ' + currencySymbol +  ' ' + parseFloat(lastPrice)*parseFloat(lastPrice).toFixed(2);
+        portfolioElement.innerHTML = this.config.showBeforeOwned + ' ' + currencySymbol +  ' ' + (parseFloat(lastPrice)*parseFloat(this.config.ownedAmount)).toFixed(2);
         wrapper.appendChild(portfolioElement);
       }
     }

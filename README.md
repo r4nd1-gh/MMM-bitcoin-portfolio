@@ -5,7 +5,23 @@ Module for <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>.
 ## Preview
 ![preview](preview.png)
 
-## Using the module
+## Installation
+
+In your terminal, go to your MagicMirror's Module folder:
+````
+cd ~/MagicMirror/modules
+````
+
+Clone this repository:
+````
+git clone https://github.com/jeroenpeters1986/MMM-bitcoin-portfolio.git
+````
+
+Now get your SolarEdge API key and authorize your application (instructions below).
+
+### Configuration
+
+
 Add `MMM-bitcoin-portfolio` module to the `modules` array in the `config/config.js` file:
 ````javascript
 modules: [
