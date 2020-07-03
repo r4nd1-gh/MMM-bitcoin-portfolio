@@ -5,7 +5,7 @@ Module.register("MMM-bitcoin-portfolio", {
   result: {},
   defaults: {
     currency: 'usd',
-    showBefore: 'Bitcoin price: ',
+    showBeforePrice: 'Bitcoin price: ',
     exchange: 'bitstamp',
     ownedAmount: 0,
     showBeforeOwned: '',
@@ -43,7 +43,7 @@ Module.register("MMM-bitcoin-portfolio", {
     let currencySymbol = this.config.currencyTable[this.config.currency].symbol;
     let lastPrice = data.last;
     if (lastPrice) {
-      symbolElement.innerHTML = this.config.showBefore + ' ' + currencySymbol;
+      symbolElement.innerHTML = this.config.showBeforePrice + ' ' + currencySymbol;
       wrapper.appendChild(symbolElement);
       let priceElement = document.createElement("span");
       priceElement.innerHTML = lastPrice;

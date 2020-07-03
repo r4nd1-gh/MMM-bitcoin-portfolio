@@ -2,6 +2,11 @@
 A Bitcoin pricechecker which can also display the price of your Bitcoin amount.
 Module for <a href="https://github.com/MichMich/MagicMirror">MagicMirror</a>.
 
+## Support
+If you like this module and want to thank, please buy me a coffee.
+
+<a href="https://www.buymeacoffee.com/jeroenpeters" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png" alt="Buy Me A Coffee" style="height: 45px !important;width: 180px !important;" ></a>
+
 ## Preview
 ![preview](preview.png)
 
