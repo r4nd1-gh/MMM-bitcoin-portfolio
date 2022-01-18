@@ -5,6 +5,7 @@ Module.register("MMM-bitcoin-portfolio", {
   result: {},
   defaults: {
     currency: 'usd',
+    numberFormat: 'en-US',
     showBeforePrice: 'Bitcoin price: ',
     exchange: 'bitstamp',
     ownedAmount: 0,
@@ -14,11 +15,11 @@ Module.register("MMM-bitcoin-portfolio", {
     // Used to work out url and symbols
     currencyTable: {
       usd: {
-        symbol: '$',
+//        symbol: '$',
         exchangeCode: 'btcusd'
       },
       eur: {
-        symbol: '€',
+//        symbol: '€',
         exchangeCode: 'btceur'
       }
     }
@@ -40,13 +41,13 @@ Module.register("MMM-bitcoin-portfolio", {
 
     let data = this.result;
     let symbolElement =  document.createElement("span");
-    let currencySymbol = this.config.currencyTable[this.config.currency].symbol;
+//    let currencySymbol = this.config.currencyTable[this.config.currency].symbol;
     let lastPrice = data.last;
     if (lastPrice) {
-      symbolElement.innerHTML = this.config.showBeforePrice + ' ' + currencySymbol;
+      symbolElement.innerHTML = this.config.showBeforePrice + ' ';
       wrapper.appendChild(symbolElement);
       let priceElement = document.createElement("span");
-      priceElement.innerHTML = lastPrice;
+      priceElement.innerHTML = new Intl.NumberFormat(this.config.numberFormat, { style: 'currency', currency: this.config.currency }).format(parseFloat(lastPrice));
       wrapper.appendChild(priceElement);
 
       if( this.config.ownedAmount > 0 )
@@ -55,7 +56,7 @@ Module.register("MMM-bitcoin-portfolio", {
         wrapper.appendChild(brElement);
 
         let portfolioElement = document.createElement("small");
-        portfolioElement.innerHTML = this.config.showBeforeOwned + ' ' + currencySymbol +  ' ' + (parseFloat(lastPrice)*parseFloat(this.config.ownedAmount)).toFixed(2);
+        portfolioElement.innerHTML = this.config.showBeforeOwned + ' ' + new Intl.NumberFormat(this.config.numberFormat, { style: 'currency', currency: this.config.currency }).format(parseFloat(lastPrice)*parseFloat(this.config.ownedAmount));
         wrapper.appendChild(portfolioElement);
       }
     }
