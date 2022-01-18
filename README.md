@@ -35,6 +35,7 @@ modules: [
     position: 'middle_center',
     config: {
       currency: 'usd',                    // 'usd' and 'eur' available, defaults to 'usd'
+      numberFormat: 'en-US',              // 'de-DE' and anything more supported by Intl.NumberFormat()
       showBeforePrice: 'Bitcoin price: ', // will display before the bitcoin price
       ownedAmount: 0.05579,               // the amount of bitcoin you own yourself
       showBeforeOwned: 'Your wallet: ',   // will display before the wallet value
