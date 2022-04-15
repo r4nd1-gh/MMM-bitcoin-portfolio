@@ -1,0 +1,21 @@
+{
+  "name": "magic-mirror-module-bitcoin-portfolio",
+  "version": "1.0.0",
+  "description": "A MagicMirror² Module bitcoin ticker",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/r4nd1-gh/MMM-bitcoin-portfolio"
+  },
+  "keywords": [
+    "magic mirror",
+    "smart mirror",
+    "bitcoin",
+    "module"
+  ],
+  "author": "r4nd1-gh",
+  "license": "MIT",
+  "homepage": "https://github.com/r4nd1-gh/MMM-bitcoin-portfolio#readme",
+  "dependencies": {
+    "request": "^2.88.2"
+  }
+}
